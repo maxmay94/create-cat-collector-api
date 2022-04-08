@@ -18,7 +18,6 @@ def index():
 @auth.route('/register', methods=["POST"])
 def register():
   data = request.get_json()
-
   user_data = {
     "email": data["email"],
     "password": gen_password(data['password'])
